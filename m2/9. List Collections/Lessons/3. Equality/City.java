@@ -1,3 +1,5 @@
+import java.util.Objects;
+
 public class City {
 
     private String name;
@@ -28,6 +30,27 @@ public class City {
 
     public void setPopulation(long population) {
         this.population = population;
+    }
+
+
+
+    // Use Java code generator to generate this snippet using "Generate HashCode and Equals"
+    @Override
+    public boolean equals(Object o) {
+        // DO NOT change signauture, 'object' name! Java needs it
+        if (o == this)
+            return true;
+        if (!(o instanceof City)) {
+            return false;
+        }
+        City city = (City) o;
+        return Objects.equals(name, city.name) && population == city.population;
+    }
+
+    // Equality contract in Java requires that when you override equals, you MUST override hashcode
+    @Override
+    public int hashCode() {
+        return Objects.hash(name, population);
     }
 
 

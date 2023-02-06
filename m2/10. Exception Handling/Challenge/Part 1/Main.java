@@ -20,12 +20,12 @@ public class Main {
     public static void userInput() {
         Scanner scanner = new Scanner(System.in);
         String status = "continue";
-    
+
         while (status.equals("continue")) {
             int choice = (promptForChoice(scanner));
             Movie movie = store.getMovie(choice);
             double rating = promptForRating(scanner, movie.getName());
-    
+
             movie.setRating(rating);
             store.setMovie(choice, movie);
             printStore();
@@ -56,11 +56,11 @@ public class Main {
     public static double promptForRating(Scanner scanner, String name) {
         while (true) {
             System.out.print("\nSet a new rating for " + name + ": ");
-            
+
             // 1. Anticipate the user not entering a double.
 
             double rating = scanner.nextDouble();
-            
+
             // 2. Anticipate the rating being incorrect.
 
             return rating;
@@ -77,7 +77,10 @@ public class Main {
         Scanner scanFile = new Scanner(fis);
 
         while (scanFile.hasNextLine()) {
-            // TODO
+            String line = scanFile.nextLine();
+            String[] words = line.split("--");
+            store.addMovie(new Movie(words[0], words[1], 9));
+
         }
         scanFile.close();
     }

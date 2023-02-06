@@ -6,7 +6,8 @@ public class Store {
     private List<Movie> movies;
 
     public Store() {
-        // This application prioritizes retrieving/updating data and does not add/remove elements from the middle.
+        // This application prioritizes retrieving/updating data and does not add/remove
+        // elements from the middle.
         this.movies = new LinkedList<Movie>();
 
     }
@@ -16,7 +17,7 @@ public class Store {
     }
 
     public void setMovie(int index, Movie movie) {
-       this.movies.set(index, movie);
+        this.movies.set(index, movie);
     }
 
     public void addMovie(Movie movie) {
@@ -30,5 +31,6 @@ public class Store {
         }
         return temp;
     }
+
 
 }
