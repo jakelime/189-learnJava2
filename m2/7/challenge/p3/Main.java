@@ -24,13 +24,22 @@ public class Main {
 
         printStore();
         userInput();
-        
+
     }
 
     public static void userInput() {
         Scanner scanner = new Scanner(System.in);
         String status = "continue";
         while (status.equals("continue")) {
+            System.out.println("\nPlease choose an integer between 0 - 9: ");
+            int choice = scanner.nextInt();
+            Movie movie = store.getMovie(choice);
+            System.out.print("Set a new rating for " + movie.getName() + ": ");
+            Float rating = scanner.nextFloat();
+            movie.setRating(rating);
+            store.setMovie(choice, movie);
+            printStore();
+
             System.out.print("To edit another rating, type: 'continue': ");
             status = scanner.next();
         }

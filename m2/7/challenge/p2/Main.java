@@ -17,7 +17,10 @@ public class Main {
             new Movie("The Lord of the Rings: The Fellowship of the Ring", "DVD", 8.8)
         };
 
-        // TODO: populate the store object (defined on top) with movies before printing it
+        // populate the store with the array of movies
+        for (int i = 0; i < movies.length; i++) {
+            store.setMovie(i, movies[i]);
+        }
 
         printStore();
 
