@@ -6,30 +6,29 @@ public class Main {
 
         List<Double> prices = Arrays.asList(55.99, 33.99, 88.99, 11.49, 55.99, 111.99, 77.99);
 
-        // TODO
-
+        //
+        prices.sort((left, right) -> left.compareTo(right));
         System.out.println("\nPrices\n------");
-
-        // TODO
+        //
+        prices.forEach(x -> System.out.println(x));
 
         List<String> books = Arrays.asList(
-            "To Kill a Mockingbird",
-            "The Great Gatsby",
-            "Pride and Prejudice",
-            "The Catcher in the Rye",
-            "The Alchemist",
-            "One Hundred Years of Solitude",
-            "Moby-Dick",
-            "The Brothers Karamazov",
-            "The Lord of the Rings",
-            "The Picture of Dorian Gray"
-        );
+                "To Kill a Mockingbird",
+                "The Great Gatsby",
+                "Pride and Prejudice",
+                "The Catcher in the Rye",
+                "The Alchemist",
+                "One Hundred Years of Solitude",
+                "Moby-Dick",
+                "The Brothers Karamazov",
+                "The Lord of the Rings",
+                "The Picture of Dorian Gray");
 
-        // TODO
-
+        //
+        books.sort((left, right) -> left.compareTo(right));
         System.out.println("\nLibrary\n--------");
-
-        // TODO
+        //
+        books.forEach(x -> System.out.println(x));
 
     }
 }
